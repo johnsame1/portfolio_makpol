@@ -1,0 +1,128 @@
+.sliderContainer {
+  overflow: hidden;
+  padding: 20px;
+}
+.sliderContainer .head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.slider {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sliderContentLeft,
+.sliderContentRight {
+  display: flex;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.sliderContentLeft {
+  animation-name: scroll;
+}
+
+.sliderContentRight {
+  animation-name: scrollReverse;
+}
+
+.sliderContentLeft .card,
+.sliderContentRight .card {
+  background: #f0eef6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 0 10px;
+  min-width: 350px;
+  max-width: 400px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sliderContentLeft .card .title,
+.sliderContentRight .card .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sliderContentLeft .card .title .titleContainer,
+.sliderContentRight .card .title .titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliderContentLeft .card .clientImage,
+.sliderContentRight .card .clientImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.job {
+  font-size: 14px;
+  color: #555;
+  margin: 5.2px 0;
+}
+
+.comment {
+  font-style: italic;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.date {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+.sliderContentLeft {
+  animation: scroll 40s linear infinite;
+}
+
+.sliderContentRight {
+  animation: scrollReverse 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .sliderContentLeft {
+    animation-duration: 60s;
+  }
+
+  .sliderContentRight {
+    animation-duration: 60s;
+  }
+
+  .sliderContentLeft .card,
+  .sliderContentRight .card {
+    min-width: 180px;
+    max-width: 220px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,233 @@
+.sectionAbout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0 50px 0;
+  position: relative;
+}
+
+.sectionAbout .title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sectionAbout .header {
+  width: 31%;
+  text-align: center;
+  font-weight: 500;
+  color: #888888;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.sectionAbout .containerAbout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionAbout .containerAbout .contentAbout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.sectionAbout .containerAbout .contentLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.sectionAbout .containerAbout .contentLeft .imageWrapper {
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  height: 370px;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+    transition: 1s ease-in-out;
+
+}
+.sectionAbout .containerAbout .contentLeft .imageWrapper:hover {
+  transform: rotateX(360deg) scale(1.2) ;
+
+
+}
+
+.imageWrapper .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  
+}
+
+.imageWrapper::before,
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+}
+
+.imageWrapper::before {
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-top: 2px dashed #888;
+  border-right: 2px dashed #888;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 20px;
+}
+
+.imageWrapper::after {
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-left: 2px dashed #888;
+  border-bottom: 2px dashed #888;
+  border-top: none;
+  border-right: none;
+  border-radius: 15px;
+}
+
+
+
+.sectionAbout .containerAbout .contentLeft .imageWrapper .image {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.sectionAbout .containerAbout .coulmnLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+.sectionAbout .containerAbout .coulmnLine .line1,
+.sectionAbout .containerAbout .coulmnLine .line2 {
+  height: 100px;
+  border-left: 2px solid black;
+  width: 0;
+  margin: 10px 0;
+}
+
+.sectionAbout .containerAbout .coulmnLine .year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #888888;
+}
+
+.sectionAbout .containerAbout .contentRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+}
+
+
+
+.sectionAbout .containerAbout .contentRight .topic {
+  width: 100%;
+  color: #888888;
+  font-weight: 400;
+  font-size: 18px;
+}
+.sectionAbout .rotated-box {
+  width: 80px;
+  height: 80px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  top: 60px;
+  right: 90px;
+  transform: rotate(41.46deg);
+  z-index: -1;
+}
+.sectionAbout .rotated-box2 {
+  width: 60px;
+  height: 60px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px;
+  right: 160px;
+  transform: rotate(41.46deg);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+ 
+
+  .sectionAbout .title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .sectionAbout .header {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .sectionAbout .containerAbout .contentAbout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sectionAbout .containerAbout .contentLeft,
+  .sectionAbout .containerAbout .contentRight {
+    width: 100%;
+  }
+
+  .sectionAbout .containerAbout .contentLeft .imageWrapper {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .sectionAbout .containerAbout .contentLeft .imageWrapper .image {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .sectionAbout .containerAbout .coulmnLine {
+    display: none;
+  }
+
+  .sectionAbout .containerAbout .contentRight {
+    text-align: center;
+  }
+
+  .sectionAbout .containerAbout .contentRight .topic {
+    font-size: 16px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .sectionAbout .rotated-box,
+  .sectionAbout .rotated-box2 {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+}
