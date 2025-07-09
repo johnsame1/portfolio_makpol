@@ -2,6 +2,7 @@
   overflow: hidden;
   padding: 20px;
 }
+
 .sliderContainer .head {
   display: flex;
   justify-content: center;
@@ -9,29 +10,36 @@
   margin-left: 25px;
 }
 
+.description {
+  color: #888888;
+  margin: 0 0 25px 40px;
+  font-weight: 400;
+}
+
 .slider {
-  display: flex;
+  display: block;
   margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
 }
 
-.sliderContentLeft,
-.sliderContentRight {
+.sliderTrack {
   display: flex;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  gap: 10px;
+    direction: ltr; /* ✅ أهم سطر */
+
+  width: max-content;
 }
 
-.sliderContentLeft {
-  animation-name: scroll;
+.scroll-left {
+  animation: scrollLeft 35s linear infinite;
 }
 
-.sliderContentRight {
-  animation-name: scrollReverse;
+.scroll-right {
+  animation: scrollRight 35s linear infinite;
 }
 
-.sliderContentLeft .card,
-.sliderContentRight .card {
+.card {
   background: #f0eef6;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,22 +53,19 @@
   justify-content: space-between;
 }
 
-.sliderContentLeft .card .title,
-.sliderContentRight .card .title {
+.card .title {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.sliderContentLeft .card .title .titleContainer,
-.sliderContentRight .card .title .titleContainer {
+.card .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.sliderContentLeft .card .clientImage,
-.sliderContentRight .card .clientImage {
+.clientImage {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -85,15 +90,53 @@
   color: #999;
   text-align: right;
 }
-.sliderContentLeft {
-  animation: scroll 40s linear infinite;
+.scrollRight {
+  animation: scrollRight 35s linear infinite;
 }
 
-.sliderContentRight {
-  animation: scrollReverse 40s linear infinite;
+.scrollLeft {
+  animation: scrollLeft 35s linear infinite;
 }
 
-@keyframes scroll {
+.scrollLTRRight {
+  animation: scrollLTRRight 35s linear infinite;
+}
+
+.scrollLTRLeft {
+  animation: scrollLTRLeft 35s linear infinite;
+}
+
+/* Animations */
+/* عربي */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* إنجليزي */
+@keyframes scrollLTRRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scrollLTRLeft {
   0% {
     transform: translateX(0);
   }
@@ -102,25 +145,10 @@
   }
 }
 
-@keyframes scrollReverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .sliderContentLeft {
-    animation-duration: 60s;
-  }
-
-  .sliderContentRight {
-    animation-duration: 60s;
-  }
-
-  .sliderContentLeft .card,
-  .sliderContentRight .card {
+  .card {
     min-width: 180px;
     max-width: 220px;
     padding: 10px;

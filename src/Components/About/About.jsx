@@ -1,16 +1,17 @@
 import React from 'react';
 import './About.css';
 import image from '../../assets/man.png';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <div className="sectionAbout">
-      <h1 className='title'>About Us</h1>
+      <h1 className="title">{t("about.title")}</h1>
 
       <div className="header">
-        Our journey began in 2025 when a small group of developers and
-        designers united around one belief: that software should solve real
-        problems, not create new ones.
+        {t("about.description")}
       </div>
 
       <div className="containerAbout">
@@ -31,15 +32,14 @@ function About() {
 
           {/* Right Text */}
           <div className="contentRight">
-            <h1>Our Growth Journey</h1>
+            <h1>{t("about.growthTitle")}</h1>
             <p className="topic">
-              We’re a newly launched software company with a clear mission: to
-              build smart, reliable, and human-centered digital products.
+              {t("about.growthText")}
             </p>
           </div>
         </div>
-        <div className='rotated-box'></div>
-      <div className='rotated-box2'></div>
+        <div className="rotated-box"></div>
+        <div className="rotated-box2"></div>
       </div>
     </div>
   );

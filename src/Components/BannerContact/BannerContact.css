@@ -1,0 +1,108 @@
+.bannerContact {
+  height: 70vh;
+  background-image: url('../../assets/image\ 3.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-attachment: scroll;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 10%;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bannerContact .bannerOverlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.77);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bannerContact .bannerContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 5;
+  position: relative;
+}
+
+.bannerContact .bannerContent .bannerTitle {
+  min-width: 400px;
+  color: #5e56a3;
+  font-weight: 400;
+  font-size: 68px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bannerContact .bannerContent .bannerTobic {
+  min-width: 200px;
+  color: #666;
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+}
+.bannerContact .rotated-box {
+  width: 100px;
+  height: 100px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  transform: rotate(41.46deg);
+  z-index: -1;
+}
+.bannerContact .rotated-box2 {
+  width: 70px;
+  height: 70px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: 650px;
+  transform: rotate(41.46deg);
+  z-index: 1;
+}
+.bannerContact .rotated-box3 {
+  width: 50px;
+  height: 50px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 60px;
+  left: 600px;
+  transform: rotate(41.46deg);
+  z-index: 1;
+}
+.bannerContact .rotated-box4 {
+  width: 70px;
+  height: 70px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 350px;
+  left: 100px;
+  transform: rotate(41.46deg);
+  z-index: 1;
+}
+.bannerContact .rotated-box5 {
+  width: 50px;
+  height: 50px;
+  background: #7872b50d;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 355px;
+  left: 50px;
+  transform: rotate(41.46deg);
+  z-index: 1;
+}

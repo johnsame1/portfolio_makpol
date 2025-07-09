@@ -1,8 +1,11 @@
 import React from 'react';
 import './SectionFour.css';
 import { FaPlay } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="SectionFour">
       <div className="intro">
@@ -14,44 +17,40 @@ const WhyChooseUs = () => {
             fontFamily: '400',
           }}
         >
-          <span className="line"></span>Why Choose Us
+          <span className="line"></span>
+          {t('why.title')}
         </h2>
         <p className="descreption">
-          we’re a small, passionate team that cares about every detail.
-          <br /> We listen to your needs, build clean and modern software, and
-          support you every step of the way.
-          <br /> Even though we’re just starting, we work with full focus and
-          commitment like your project is our own.
+          {t('why.description.line1')}
+          <br />
+          {t('why.description.line2')}
+          <br />
+          {t('why.description.line3')}
         </p>
         <div className="video">
           <button className="play">
             <FaPlay style={{ fontSize: '15px' }} />
           </button>
-          <h1>Watch pref video</h1>
+          <h1>{t('why.video')}</h1>
         </div>
       </div>
+
       <div className="features">
         <div className="feature-card highlighted">
-          <h3>User-First Approach</h3>
-          <p>We design clean, intuitive interfaces no fluff, just function.</p>
+          <h3>{t('why.cards.card1.title')}</h3>
+          <p>{t('why.cards.card1.desc')}</p>
         </div>
         <div className="feature-card">
-          <h3>Fast & Focused Team</h3>
-          <p>
-            Work directly with a passionate dev team that cares about your
-            goals.
-          </p>
+          <h3>{t('why.cards.card2.title')}</h3>
+          <p>{t('why.cards.card2.desc')}</p>
         </div>
         <div className="feature-card">
-          <h3>Clean Code, Future Proof</h3>
-          <p>Built with scalability and performance in mind.</p>
+          <h3>{t('why.cards.card3.title')}</h3>
+          <p>{t('why.cards.card3.desc')}</p>
         </div>
         <div className="feature-card highlighted">
-          <h3>We’re Here For You</h3>
-          <p>
-            Small team = big attention. We treat every project like it’s our
-            own.
-          </p>
+          <h3>{t('why.cards.card4.title')}</h3>
+          <p>{t('why.cards.card4.desc')}</p>
         </div>
       </div>
     </section>

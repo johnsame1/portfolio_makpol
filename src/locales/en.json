@@ -1,0 +1,128 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact Us"
+  },
+  "banner": {
+    "titlePart1": "Build",
+    "titleHighlight": "Smart Software",
+    "titlePart2": "Empower Your Business",
+    "subtitle": "We craft reliable and scalable web & mobile solutions tailored to your goals.",
+    "button": "Get Start"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Our journey began in 2025 when a small group of developers and designers united around one belief: that software should solve real problems, not create new ones.",
+    "growthTitle": "Our Growth Journey",
+    "growthText": "We’re a newly launched software company with a clear mission: to build smart, reliable, and human-centered digital products."
+  },
+  "services": {
+    "sectionTitle": "Our Working Process",
+    "discovery": {
+      "title": "Discovery & Requirements",
+      "description": "We start by understanding your vision, goals, and business needs."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "We translate your idea into clear wireframes and engaging UI."
+    },
+    "testing": {
+      "title": "Testing & QA",
+      "description": "We ensure everything works smoothly on all devices"
+    },
+    "development": {
+      "title": "Development",
+      "description": "Our developers bring the designs to life using clean, scalable code."
+    },
+    "launch": {
+      "title": "Launch & Support",
+      "description": "Your product goes live and we stay with you"
+    }
+  },
+  "why": {
+    "title": "Why Choose Us",
+    "description": {
+      "line1": "We’re a small, passionate team that cares about every detail.",
+      "line2": "We listen to your needs, build clean and modern software, and support you every step of the way.",
+      "line3": "Even though we’re just starting, we work with full focus and commitment like your project is our own."
+    },
+    "video": "Watch pref video",
+    "cards": {
+      "card1": {
+        "title": "User-First Approach",
+        "desc": "We design clean, intuitive interfaces no fluff, just function."
+      },
+      "card2": {
+        "title": "Fast & Focused Team",
+        "desc": "Work directly with a passionate dev team that cares about your goals."
+      },
+      "card3": {
+        "title": "Clean Code, Future Proof",
+        "desc": "Built with scalability and performance in mind."
+      },
+      "card4": {
+        "title": "We’re Here For You",
+        "desc": "Small team = big attention. We treat every project like it’s our own."
+      }
+    }
+  },
+  "slider": {
+    "title": "What Our Clients Say",
+    "description": "We’re proud to build strong relationships with our clients"
+  },
+  "testimonials": {
+    "1": {
+      "job": "Software Engineer",
+      "comment": "Great service and amazing team!"
+    },
+    "2": {
+      "job": "Product Manager",
+      "comment": "I loved the experience, highly recommended!"
+    },
+    "3": {
+      "job": "UX Designer",
+      "comment": "Very professional and fast delivery."
+    },
+    "4": {
+      "job": "Marketing Specialist",
+      "comment": "Exceptional quality and friendly staff."
+    },
+    "5": {
+      "job": "Business Analyst",
+      "comment": "Smooth process and great communication."
+    },
+    "6": {
+      "job": "Graphic Designer",
+      "comment": "I will definitely come back again!"
+    },
+    "7": {
+      "job": "Data Scientist",
+      "comment": "The results exceeded my expectations."
+    },
+    "8": {
+      "job": "HR Manager",
+      "comment": "Highly organized and professional team."
+    },
+    "9": {
+      "job": "QA Engineer",
+      "comment": "Fast response and great quality."
+    },
+    "10": {
+      "job": "Content Writer",
+      "comment": "Amazing support and fantastic results."
+    }
+  },"footer": {
+  "tagline": "We build smart digital products",
+  "rights": "All rights reserved © 2025 Makpool Solutions"
+}
+,
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you"
+  }
+
+
+}

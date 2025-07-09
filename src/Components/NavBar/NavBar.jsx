@@ -4,21 +4,22 @@ import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { GrLanguage } from "react-icons/gr";
 import { FaAngleDown } from 'react-icons/fa';
+import { HashLink } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState('En');
-  const [showDropdown, setShowDropdown] = useState(false); 
+  const [showDropdown, setShowDropdown] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   const toggleLanguageDropdown = () => setShowDropdown(!showDropdown);
 
   const changeLanguage = (lang) => {
-    setLanguage(lang);
-    setShowDropdown(false); 
-    closeMenu(); 
+    i18n.changeLanguage(lang);
+    setShowDropdown(false);
+    closeMenu();
   };
 
   return (
@@ -27,9 +28,9 @@ const NavBar = () => {
         <div className="container">
           {/* Logo */}
           <div className="logos">
-            <Link to="/" className="logo" onClick={closeMenu}>
+            <HashLink smooth to="/#banner" className="logo" onClick={closeMenu}>
               <img src={logo} alt="Logo" className="logo-img" />
-            </Link>
+            </HashLink>
           </div>
 
           {/* Burger Menu */}
@@ -39,25 +40,39 @@ const NavBar = () => {
 
           {/* Links */}
           <div className={`links ${isOpen ? 'open' : ''}`}>
-            <Link to="/" onClick={closeMenu}>Home</Link>
-            <Link to="/about" onClick={closeMenu}>About</Link>
-            <Link to="/services" onClick={closeMenu}>Services</Link>
-            <Link to="/portfolio" onClick={closeMenu}>Portfolio</Link>
-            <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
+            <HashLink smooth to="/#banner" onClick={closeMenu}>{t("navbar.home")}</HashLink>
+            <HashLink smooth to="/#about" onClick={closeMenu}>{t("navbar.about")}</HashLink>
+            <HashLink smooth to="/#services" onClick={closeMenu}>{t("navbar.services")}</HashLink>
+            <HashLink smooth to="/#portfolio" onClick={closeMenu}>{t("navbar.portfolio")}</HashLink>
+            <Link to="/contact" onClick={closeMenu}>{t("navbar.contact")}</Link>
+
+            {/* Language Button (for mobile) */}
+            <div className="mobile-only">
+              <button className="btnCreate" onClick={toggleLanguageDropdown}>
+                <GrLanguage style={{ fontSize: '20px', marginRight: '10px' }} />
+                <p>{i18n.language.toUpperCase()}</p>
+                <FaAngleDown />
+              </button>
+              {showDropdown && (
+                <div className="language-dropdown">
+                  <button onClick={() => changeLanguage('en')}>English</button>
+                  <button onClick={() => changeLanguage('ar')}>العربية</button>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Language Button with Dropdown */}
-          <div className="Btns" style={{ position: 'relative' }}>
+          {/* Language Button (for desktop) */}
+          <div className="Btns desktop-only" style={{ position: 'relative' }}>
             <button className="btnCreate" onClick={toggleLanguageDropdown}>
-              <GrLanguage  style={{fontSize:'20px',marginRight:'10px'}} />
-              <p>{language}</p>
+              <GrLanguage style={{ fontSize: '20px', marginRight: '10px' }} />
+              <p>{i18n.language.toUpperCase()}</p>
               <FaAngleDown />
             </button>
-
             {showDropdown && (
               <div className="language-dropdown">
-                <button onClick={() => changeLanguage('En')}>English</button>
-                <button onClick={() => changeLanguage('Ar')}>العربية</button>
+                <button onClick={() => changeLanguage('en')}>English</button>
+                <button onClick={() => changeLanguage('ar')}>العربية</button>
               </div>
             )}
           </div>

@@ -1,11 +1,50 @@
-a{
-  text-decoration: none;
-}
+/* ضبط الخط العام */
 * {
   font-family: 'Port Lligat Slab', serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* الروابط بدون underline */
+a {
+  text-decoration: none;
+}
 
-body{
-    margin-top: 75px;
+/* إعدادات الـ body العامة */
+body {
+  margin-top: 75px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* الاتجاه العربي */
+body.rtl {
+  direction: rtl;
+}
+
+/* الاتجاه الإنجليزي */
+body.ltr {
+  direction: ltr;
+}
+
+/* ضبط النصوص حسب اللغة */
+body.rtl .card {
+  text-align: right;
+}
+body.ltr .card {
+  text-align: left;
+}
+
+/* عنوان القسم */
+.header-title {
+  text-align: left;
+  padding-left: 30px;
+}
+
+body.rtl .header-title {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 30px;
 }

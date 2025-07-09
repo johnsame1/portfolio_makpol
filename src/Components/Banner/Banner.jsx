@@ -2,22 +2,27 @@ import React from 'react';
 import './Banner.css';
 import banner from '../../assets/banner.png';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Banner = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="banner">
       <div className="banner-container">
         <div className="banner-content">
           <div className="banner-text">
             <h1 className="banner-heading">
-              Build <span className="highlight">Smart Software</span> Empower Your Business
+              {t("banner.titlePart1")} <span className="highlight">{t("banner.titleHighlight")}</span> {t("banner.titlePart2")}
             </h1>
             <p className="banner-subtext">
-              We craft reliable and scalable web & mobile solutions tailored to your goals.
+              {t("banner.subtitle")}
             </p>
             <div className="banner-buttons">
               <Link to="contact">
-                <button type="button" className="banner-button">Get Start</button>
+                <button type="button" className="banner-button">
+                  {t("banner.button")}
+                </button>
               </Link>
             </div>
           </div>
@@ -29,10 +34,14 @@ const Banner = () => {
 
         <div className="banner-button-mobile">
           <Link to="SearchByID">
-            <button type="button" className="banner-button">Get Start</button>
+            <button type="button" className="banner-button">
+              {t("banner.button")}
+            </button>
           </Link>
         </div>
       </div>
+
+      {/* Decoration Elements */}
       <div className='triangle'></div>
       <div className='rotated-box'></div>
       <div className='rotated-box2'></div>

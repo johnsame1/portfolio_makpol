@@ -177,3 +177,57 @@
     display: flex !important;
   }
 }
+
+/* ========== Language Switcher Responsive Fix ========== */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .mobile-only .btnCreate {
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    border: 0 transparent;
+    display: flex;
+    background-color: transparent;
+
+  }
+
+  .NavBar .language-dropdown {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin-top: 5px;
+  }
+
+  .NavBar .language-dropdown button {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .NavBar .language-dropdown button:hover {
+    background-color: #eee;
+  }
+}
