@@ -26,7 +26,9 @@ html[dir="rtl"] .servicesTitle {
   margin-left: 0;
   margin-right: 120px;
   text-align: right;
-  flex-direction: row-reverse;
+}
+html[dir="rtl"] .content::before {
+  right: 40px;
 }
 
 .leftContainer,
