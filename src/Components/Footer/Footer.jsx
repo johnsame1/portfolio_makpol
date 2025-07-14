@@ -5,6 +5,7 @@ import './Footer.css';
 import logo from '../../assets/logo.png';
 import { IoIosChatboxes } from 'react-icons/io';
 import { MdCall } from 'react-icons/md';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 const Footer = () => (
   <footer className="footer">
@@ -69,6 +70,13 @@ const Footer = () => (
           >
             <FaLinkedin className="icon" />
           </a>
+          <a
+                      href="https://wa.me/201091944770"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaWhatsapp className="icon" />
+                    </a>
         </div>
         <p>All rights reserved © 2025 Makpool Solutions</p>
       </div>
