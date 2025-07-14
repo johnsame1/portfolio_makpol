@@ -8,10 +8,16 @@ import { useTranslation } from 'react-i18next';
 const SliderCart = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
+
   const renderCards = (direction) => (
     <div className={`sliderTrack ${direction}`}>
       {[...testimonials, ...testimonials].map((item, index) => (
-        <div key={index} className="card">
+        <div
+          key={index}
+          className="card"
+          data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'} // ✅ Animation
+          data-aos-delay={(index % testimonials.length) * 100} // ✅ Delay effect
+        >
           <div className="title">
             <img src={image} alt={item.name} className="clientImage" />
             <div className="titleContainer">
@@ -25,8 +31,9 @@ const SliderCart = () => {
       ))}
     </div>
   );
+
   return (
-    <div className="sliderContainer">
+    <div className="sliderContainer" data-aos="fade-up">
       <div className="head">
         <h1>
           <FaComments style={{ color: '#525CA9', marginRight: '5px' }} />

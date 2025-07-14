@@ -10,6 +10,24 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+.servicesTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 50px;
+  margin-left: 120px;
+  color: #333;
+}
+
+/* لو اللغة RTL زي العربي */
+html[dir="rtl"] .servicesTitle {
+  margin-left: 0;
+  margin-right: 120px;
+  text-align: right;
+  flex-direction: row-reverse;
+}
 
 .leftContainer,
 .rightContainer {
@@ -32,9 +50,11 @@
   align-items: flex-end;
   gap: 1rem;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important ; 
   position: relative;
   padding-left: 2rem;
+  padding: 5px 10px 10px 10px;
+
 }
 
 .content:hover {
@@ -45,7 +65,7 @@
 .content::before {
   content: '';
   position: absolute;
-  left: 4.3rem;
+  left: 2.7rem;
   top: 2.5rem;
   bottom: -1.5rem;
   width: 2px;
@@ -92,6 +112,7 @@
     flex-direction: column;
     align-items: center;
   }
+ 
 
   .leftContainer,
   .rightContainer {
@@ -100,10 +121,13 @@
   }
 
   .content {
-    padding-left: 0;
-    text-align: start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: start;
+    padding: 1rem;
+    width: 90%;
+    text-align: center;
+    position: relative;
   }
 
   .content::before {
@@ -111,6 +135,21 @@
   }
 
   .icon {
-    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .titleContent {
+    align-items: center;
+  }
+
+  .servicesTitle {
+    margin: 0 auto 30px auto;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  html[dir="rtl"] .servicesTitle {
+    margin-right: 0;
   }
 }

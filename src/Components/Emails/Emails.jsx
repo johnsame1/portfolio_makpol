@@ -1,84 +1,165 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { IoMdCall } from 'react-icons/io';
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './Emails.css';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 function Emails() {
+  const { t } = useTranslation();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_k0j6fqs',
+        'template_004ws0f',
+        e.target,
+        'apSRHYZU7LZihPeib'
+      )
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully!',
+          text: 'Your message has been sent.',
+          confirmButtonText: 'ok',
+        });
+        e.target.reset();
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error!',
+          text: 'Failed to send message to admin. Please try again later.',
+          confirmButtonText: 'ok',
+        });
+      });
+  };
+
   return (
     <div className="emailSection">
-      <div className="leftSection">
-        <div className="leftContent">
-          <h1>Get in touch</h1>
-          <p>
-            Have a project in mind? Let’s talk. We’re here to answer your
-            questions and help bring your ideas to life.
-          </p>
+      {/* Left Side */}
+      <div className="leftSection" data-aos="fade-right">
+        <div className="leftContent" data-aos="fade-down">
+          <h1>{t('contacts.title')}</h1>
+          <p>{t('contacts.description')}</p>
         </div>
-        <hr />
+        <hr data-aos="fade-in" />
 
-        <div className="links">
+        <div className="links" data-aos="fade-up" data-aos-delay="100">
           <FaLocationDot className="icons" />
           <div className="tobic">
-            <h2>Location</h2>
-            <p>38 Hesham Labeb Street, Mostafa Alnahas</p>
+            <h2>{t('contacts.locationTitle')}</h2>
+            <p>{t('contacts.address')}</p>
           </div>
         </div>
 
-        <div className="links">
+        <div className="links" data-aos="fade-up" data-aos-delay="200">
           <MdEmail className="icons" />
           <div className="tobic">
-            <h2>Email Us</h2>
-            <p>makpool@makpoolsolutions.com</p>
+            <h2>{t('contacts.emailTitle')}</h2>
+            <p>{t('contacts.email')}</p>
           </div>
         </div>
 
-        <div className="links">
+        <div className="links" data-aos="fade-up" data-aos-delay="300">
           <IoMdCall className="icons" />
           <div className="tobic">
-            <h2>Call Us</h2>
-            <p>010673909260</p>
+            <h2>{t('contacts.phoneTitle')}</h2>
+            <p>{t('contacts.phone')}</p>
           </div>
         </div>
 
-        <hr />
-        <h2>Follow Our Social Media</h2>
-        <div className="logos">
-          <FaFacebook className="icons" />
-          <FaLinkedin className="icons" />
-          <FaWhatsapp className="icons" />
+        <hr data-aos="fade-in" />
+        <h2 data-aos="fade-right">{t('contacts.followUs')}</h2>
+        <div className="logos" data-aos="zoom-in">
+          <a
+            href="https://www.facebook.com/share/1MLJPqnnqt/?mibextid=qi2Omg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="icons" />
+          </a>{' '}
+          <a
+            href="https://www.linkedin.com/company/makpool-solutions/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="icons" />
+          </a>{' '}
+          <a
+            href="https://wa.me/201091944770"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="icons" />
+          </a>
         </div>
       </div>
 
-      <div className="rightSection">
+      {/* Right Side */}
+      <div className="rightSection" data-aos="fade-left">
         <div className="rightContent">
-  <h1>Send a message</h1>
-  <p>Send us a quick message and our team will reach out to you</p>
+          <h1 data-aos="fade-down">{t('contacts.formTitle')}</h1>
+          <p data-aos="fade-up">{t('contacts.formDescription')}</p>
 
-  <form className="inputs">
-    <div className="inputRow">
-      <input type="text" placeholder="Your Name" name="name" />
-      <input type="text" placeholder="Company Name" name="company" />
-    </div>
+          <form className="inputs" onSubmit={sendEmail}>
+            <div className="inputRow" data-aos="fade-up" data-aos-delay="100">
+              <input
+                type="text"
+                name="from_name"
+                placeholder={t('contacts.name')}
+                required
+              />
+              <input
+                type="text"
+                name="company"
+                placeholder={t('contacts.company')}
+              />
+            </div>
 
-    <div className="inputRow">
-      <input type="tel" placeholder="Phone Number" name="phone" />
-      <input type="email" placeholder="Email Address" name="email" />
-    </div>
+            <div className="inputRow" data-aos="fade-up" data-aos-delay="200">
+              <input
+                type="tel"
+                name="phone"
+                placeholder={t('contacts.phone')}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder={t('contacts.email')}
+                required
+              />
+            </div>
 
-    <div className="inputFull">
-      <input type="text" placeholder="Subject" name="subject" />
-    </div>
+            <div className="inputFull" data-aos="fade-up" data-aos-delay="300">
+              <input
+                type="text"
+                name="subject"
+                placeholder={t('contacts.subject')}
+                required
+              />
+            </div>
 
-    <div className="inputFull">
-      <textarea placeholder="Your Message" name="message" rows="5"></textarea>
-    </div>
+            <div className="inputFull" data-aos="fade-up" data-aos-delay="400">
+              <textarea
+                name="message"
+                rows="5"
+                placeholder={t('contacts.message')}
+                required
+              ></textarea>
+            </div>
 
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
+            <button type="submit" data-aos="fade-up" data-aos-delay="500">
+              {t('contacts.send')}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

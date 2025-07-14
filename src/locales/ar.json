@@ -114,13 +114,31 @@
       "job": "كاتبة محتوى",
       "comment": "دعم رائع ونتائج مذهلة."
     }
-  },"footer": {
-  "tagline": "نحن نبني منتجات رقمية ذكية",
-  "rights": "جميع الحقوق محفوظة © 2025 Makpool Solutions"
-}
-,
+  },
+  "footer": {
+    "tagline": "نحن نبني منتجات رقمية ذكية",
+    "rights": "جميع الحقوق محفوظة © 2025 Makpool Solutions"
+  },
   "contact": {
     "title": "اتصل بنا",
     "subtitle": "نحن نحب أن نسمع منك"
+  },
+  "contacts": {
+    "title": "تواصل معنا",
+    "description": "عندك فكرة مشروع؟ خلينا نتكلم. إحنا موجودين نجاوب على أسئلتك ونساعد نحول أفكارك لحقيقة.",
+    "locationTitle": "العنوان",
+    "address": "38 شارع هشام لبيب، مصطفى النحاس",
+    "emailTitle": "راسلنا",
+    "email": "mohamedmakpool11@gmail.com",
+    "phoneTitle": "اتصل بنا",
+    "phone": "01091944770",
+    "followUs": "تابعنا على وسائل التواصل",
+    "formTitle": "أرسل رسالة",
+    "formDescription": "ابعتلنا رسالة سريعة وفريقنا هيتواصل معاك",
+    "name": "الاسم",
+    "company": "اسم الشركة",
+    "subject": "الموضوع",
+    "message": "رسالتك",
+    "send": "إرسال الرسالة"
   }
 }

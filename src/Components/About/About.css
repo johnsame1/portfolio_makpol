@@ -6,6 +6,7 @@
   flex-direction: column;
   margin: 10px 0 50px 0;
   position: relative;
+  margin-top: 50px;
 }
 
 .sectionAbout .title {

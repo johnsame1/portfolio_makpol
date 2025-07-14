@@ -7,15 +7,21 @@ function BannerContact() {
 
   return (
     <div className='bannerContact'>
-      <div className='bannerContent'>
+      {/* الصورة اللي هتظهر بس في الموبايل */}
+      <div className='bannerImageMobile' data-aos="fade-down"></div>
+
+      {/* المحتوى النصي */}
+      <div className='bannerContent' data-aos="fade-up" data-aos-delay="200">
         <h1 className='bannerTitle'>{t('contact.title')}</h1>
-        <p className='bannerTobic'>{t('contact.subtitle')}</p>
+        <p className='bannerTopic'>{t('contact.subtitle')}</p>
       </div>
-      <div className='rotated-box'></div>
-      <div className='rotated-box2'></div>
-      <div className='rotated-box3'></div>
-      <div className='rotated-box4'></div>
-      <div className='rotated-box5'></div>
+
+      {/* العناصر الديكورية */}
+      <div className='rotated-box rotated-box1' data-aos="zoom-in" data-aos-delay="100"></div>
+      <div className='rotated-box rotated-box2' data-aos="zoom-in" data-aos-delay="200"></div>
+      <div className='rotated-box rotated-box3' data-aos="zoom-in" data-aos-delay="300"></div>
+      <div className='rotated-box rotated-box4' data-aos="zoom-in" data-aos-delay="400"></div>
+      <div className='rotated-box rotated-box5' data-aos="zoom-in" data-aos-delay="500"></div>
     </div>
   );
 }

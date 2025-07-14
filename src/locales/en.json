@@ -123,6 +123,26 @@
     "title": "Contact Us",
     "subtitle": "We would love to hear from you"
   }
+,
+  "contacts": {
+    "title": "Get in touch",
+    "description": "Have a project in mind? Let’s talk. We’re here to answer your questions and help bring your ideas to life.",
+    "locationTitle": "Location",
+    "address": "38 Hesham Labeb Street, Mostafa Alnahas",
+    "emailTitle": "Email Us",
+    "email": "mohamedmakpool11@gmail.com",
+    "phoneTitle": "Call Us",
+    "phone": "01091944770",
+    "followUs": "Follow Our Social Media",
+    "formTitle": "Send a message",
+    "formDescription": "Send us a quick message and our team will reach out to you",
+    "name": "Your Name",
+    "company": "Company Name",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message"
+  }
+
 
 
 }

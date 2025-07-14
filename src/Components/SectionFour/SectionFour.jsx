@@ -7,8 +7,8 @@ const WhyChooseUs = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="SectionFour">
-      <div className="intro">
+    <section className="SectionFour" data-aos="fade-up">
+      <div className="intro" data-aos="fade-right">
         <h2
           style={{
             display: 'flex',
@@ -21,34 +21,32 @@ const WhyChooseUs = () => {
           {t('why.title')}
         </h2>
         <p className="descreption">
-          {t('why.description.line1')}
-          <br />
-          {t('why.description.line2')}
-          <br />
+          {t('why.description.line1')} <br />
+          {t('why.description.line2')} <br />
           {t('why.description.line3')}
         </p>
-        <div className="video">
+        {/* <div className="video" data-aos="zoom-in">
           <button className="play">
             <FaPlay style={{ fontSize: '15px' }} />
           </button>
           <h1>{t('why.video')}</h1>
-        </div>
+        </div> */}  
       </div>
 
       <div className="features">
-        <div className="feature-card highlighted">
+        <div className="feature-card highlighted" data-aos="flip-left" data-aos-delay="100">
           <h3>{t('why.cards.card1.title')}</h3>
           <p>{t('why.cards.card1.desc')}</p>
         </div>
-        <div className="feature-card">
+        <div className="feature-card" data-aos="flip-left" data-aos-delay="200">
           <h3>{t('why.cards.card2.title')}</h3>
           <p>{t('why.cards.card2.desc')}</p>
         </div>
-        <div className="feature-card">
+        <div className="feature-card" data-aos="flip-left" data-aos-delay="300">
           <h3>{t('why.cards.card3.title')}</h3>
           <p>{t('why.cards.card3.desc')}</p>
         </div>
-        <div className="feature-card highlighted">
+        <div className="feature-card highlighted" data-aos="flip-left" data-aos-delay="400">
           <h3>{t('why.cards.card4.title')}</h3>
           <p>{t('why.cards.card4.desc')}</p>
         </div>

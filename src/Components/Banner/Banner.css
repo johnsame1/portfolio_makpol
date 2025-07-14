@@ -58,7 +58,7 @@
 
 .banner .banner-container .banner-button, 
 .banner .banner-container .banner-button-mobile .banner-button {
-  background-color: #7872b5;
+  background-color: #7872E5;
   color: #fff;
   padding: 12px 50px;
   border: none;
@@ -80,7 +80,7 @@
   font-size: 1rem;
   position: relative;
   overflow: hidden;
-  background-color: #7872b5;
+  background-color: #7872E5;
   z-index: 1;
 }
 .banner .banner-container .banner-button::before, 
@@ -148,7 +148,7 @@ transform: scale(1.2);
   position: absolute;
   top: 30px;
   right: 90px;
-  transform: rotate(41.46deg);
+  transform: rotate(41.46deg) !important;
   z-index: -1;
 }
 .banner .rotated-box2 {
@@ -159,7 +159,7 @@ transform: scale(1.2);
   position: absolute;
   bottom: 50px;
   left: 650px;
-  transform: rotate(41.46deg);
+  transform: rotate(41.46deg) !important;
   z-index: 1;
 }
 .banner .rotated-box3 {
@@ -170,7 +170,7 @@ transform: scale(1.2);
   position: absolute;
   bottom: 60px;
   left: 600px;
-  transform: rotate(41.46deg);
+  transform: rotate(41.46deg) !important;
   z-index: 1;
 }
 .banner .rotated-box4 {
@@ -181,7 +181,7 @@ transform: scale(1.2);
   position: absolute;
   bottom: 250px;
   left: 100px;
-  transform: rotate(41.46deg);
+  transform: rotate(41.46deg) !important;
   z-index: 1;
 }
 .banner .rotated-box5 {
@@ -192,9 +192,10 @@ transform: scale(1.2);
   position: absolute;
   bottom: 255px;
   left: 50px;
-  transform: rotate(41.46deg);
+  transform: rotate(41.46deg) !important;
   z-index: 1;
 }
+
 
 /* Responsive */
 @media screen and (max-width: 900px) {

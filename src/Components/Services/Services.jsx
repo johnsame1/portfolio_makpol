@@ -44,21 +44,15 @@ const Services = () => {
   const leftServices = servicesData.slice(3);
 
   return (
-    <div className="services">
-      <h1
-        style={{
-          display: 'flex',
-          marginLeft: '120px',
-          marginBottom: '50px',
-          fontWeight: 400,
-        }}
-      >
+    <div className="services" data-aos="fade-up">
+      <h1 className="servicesTitle" data-aos="fade-down">
         <IoMdSettings style={{ color: '#525CA9' }} /> {t('services.sectionTitle')}
       </h1>
+
       <div className="servicesContainer">
         <div className="leftContainer">
           {rightServices.map((service, index) => (
-            <div className="content" key={index}>
+            <div className="content" key={index} data-aos="fade-right" data-aos-delay={index * 100}>
               <div className="icon">{service.icon}</div>
               <div className="titleContent">
                 <h1 className="header">{service.title}</h1>
@@ -69,11 +63,11 @@ const Services = () => {
         </div>
 
         <div className="rightContainer">
-          <div className='containerImg'>
+          <div className='containerImg' data-aos="zoom-in">
             <img src={image} className="image" alt="Services illustration" />
           </div>
           {leftServices.map((service, index) => (
-            <div className="content" key={index}>
+            <div className="content" key={index} data-aos="fade-left" data-aos-delay={index * 100}>
               <div className="icon">{service.icon}</div>
               <div className="titleContent">
                 <h1 className="header">{service.title}</h1>

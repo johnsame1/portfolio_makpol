@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -22,9 +23,18 @@ const NavBar = () => {
     closeMenu();
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="navbarLine">
-      <div className="NavBar">
+      <div className={`NavBar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container">
           {/* Logo */}
           <div className="logos">
