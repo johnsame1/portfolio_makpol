@@ -37,10 +37,14 @@ section {
   color: #474747;
   justify-content: center;
   align-items: center;
+    fill: #7872B5;
+
 }
 
 .NavBar .container .logos .logo-img {
-  width: 100px;
+  width: 130px;
+    fill: #7872B5;
+  padding: 10px;
 }
 
 .NavBar .container .links {

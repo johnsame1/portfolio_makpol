@@ -35,7 +35,7 @@ const Footer = () => (
           </li>
           <li>
             <HashLink smooth to="/#portfolio">
-              Portfolio
+              Why Choose Us
             </HashLink>
           </li>
           <li>
@@ -49,14 +49,13 @@ const Footer = () => (
       <div className="footerColumn">
         <h4 className="topic">
           <IoIosChatboxes style={{ color: '#2E2D7D', fontSize: '30px' }} />{' '}
-          mohamedmakpool11@gmail.com
-        </h4>
+devosoft5@gmail.com        </h4>
         <h4 className="topic">
-          <MdCall style={{ color: '#2E2D7D', fontSize: '30px' }} /> 01091944770
+          <MdCall style={{ color: '#2E2D7D', fontSize: '30px' }} /> 01157956322
         </h4>
         <div className="socialIcons">
           <a
-            href="https://www.facebook.com/share/1MLJPqnnqt/?mibextid=qi2Omg"
+            href="https://www.facebook.com/share/196tuSbvvV/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -64,21 +63,21 @@ const Footer = () => (
           </a>
 
           <a
-            href="https://www.linkedin.com/company/makpool-solutions/"
+            // href="https://www.linkedin.com/company/makpool-solutions/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="icon" />
           </a>
           <a
-            href="https://wa.me/201091944770"
+            href="https://wa.me/+201157956322"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaWhatsapp className="icon" />
           </a>
         </div>
-        <p>All rights reserved © 2025 Makpool Solutions</p>
+        <p>All rights reserved © 2025 DevoSoft</p>
       </div>
     </div>
   </footer>

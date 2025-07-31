@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "portfolio": "Portfolio",
+    "portfolio": "Why Choose Us",
     "contact": "Contact Us"
   },
   "banner": {
@@ -116,7 +116,7 @@
     }
   },"footer": {
   "tagline": "We build smart digital products",
-  "rights": "All rights reserved © 2025 Makpool Solutions"
+  "rights": "All rights reserved © 2025 DevoSoft"
 }
 ,
   "contact": {
@@ -128,11 +128,11 @@
     "title": "Get in touch",
     "description": "Have a project in mind? Let’s talk. We’re here to answer your questions and help bring your ideas to life.",
     "locationTitle": "Location",
-    "address": "38 Hesham Labeb Street, Mostafa Alnahas",
+    "address": "Kornish EL-Maadi",
     "emailTitle": "Email Us",
-    "email": "mohamedmakpool11@gmail.com",
+    "email": "devosoft5@gmail.com",
     "phoneTitle": "Call Us",
-    "phone": "01091944770",
+    "phone": "+201157956322",
     "followUs": "Follow Our Social Media",
     "formTitle": "Send a message",
     "formDescription": "Send us a quick message and our team will reach out to you",

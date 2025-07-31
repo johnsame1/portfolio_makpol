@@ -20,13 +20,13 @@ const Home = () => {
         <Services />
       </section>
 
-      <section id="features">
+      <section id="why_choose_us">
         <SectionFour />
       </section>
 
-      <section id="portfolio">
+      {/* <section id="portfolio">
         <SliderCart />
-      </section>
+      </section> */}
     </>
   );
 };

@@ -3,7 +3,7 @@
     "home": "الرئيسية",
     "about": "من نحن",
     "services": "الخدمات",
-    "portfolio": "أعمالنا",
+    "portfolio": "لـيـه تختارنا ؟",
     "contact": "تواصل معنا"
   },
   "banner": {
@@ -117,7 +117,7 @@
   },
   "footer": {
     "tagline": "نحن نبني منتجات رقمية ذكية",
-    "rights": "جميع الحقوق محفوظة © 2025 Makpool Solutions"
+    "rights": "جميع الحقوق محفوظة © 2025 DevoSoft"
   },
   "contact": {
     "title": "اتصل بنا",
@@ -127,11 +127,11 @@
     "title": "تواصل معنا",
     "description": "عندك فكرة مشروع؟ خلينا نتكلم. إحنا موجودين نجاوب على أسئلتك ونساعد نحول أفكارك لحقيقة.",
     "locationTitle": "العنوان",
-    "address": "38 شارع هشام لبيب، مصطفى النحاس",
+    "address": "كورنيش المعادي",
     "emailTitle": "راسلنا",
-    "email": "mohamedmakpool11@gmail.com",
+    "email": "devosoft5@gmail.com",
     "phoneTitle": "اتصل بنا",
-    "phone": "01091944770",
+    "phone": "+201157956322",
     "followUs": "تابعنا على وسائل التواصل",
     "formTitle": "أرسل رسالة",
     "formDescription": "ابعتلنا رسالة سريعة وفريقنا هيتواصل معاك",

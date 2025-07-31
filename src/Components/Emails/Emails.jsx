@@ -78,7 +78,7 @@ function Emails() {
         <h2 data-aos="fade-right">{t('contacts.followUs')}</h2>
         <div className="logos" data-aos="zoom-in">
           <a
-            href="https://www.facebook.com/share/1MLJPqnnqt/?mibextid=qi2Omg"
+            href="https://www.facebook.com/share/196tuSbvvV/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -92,7 +92,7 @@ function Emails() {
             <FaLinkedin className="icons" />
           </a>{' '}
           <a
-            href="https://wa.me/201091944770"
+            href="https://wa.me/201157956322"
             target="_blank"
             rel="noopener noreferrer"
           >

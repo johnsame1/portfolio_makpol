@@ -53,7 +53,7 @@ const NavBar = () => {
             <HashLink smooth to="/#banner" onClick={closeMenu}>{t("navbar.home")}</HashLink>
             <HashLink smooth to="/#about" onClick={closeMenu}>{t("navbar.about")}</HashLink>
             <HashLink smooth to="/#services" onClick={closeMenu}>{t("navbar.services")}</HashLink>
-            <HashLink smooth to="/#portfolio" onClick={closeMenu}>{t("navbar.portfolio")}</HashLink>
+            <HashLink smooth to="/#why_choose_us" onClick={closeMenu}>{t("navbar.portfolio")}</HashLink>
             <Link to="/contact" onClick={closeMenu}>{t("navbar.contact")}</Link>
 
             {/* Language Button (for mobile) */}
