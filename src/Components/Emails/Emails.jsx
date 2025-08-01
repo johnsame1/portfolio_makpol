@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md';
 import { IoMdCall } from 'react-icons/io';
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './Emails.css';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 function Emails() {
