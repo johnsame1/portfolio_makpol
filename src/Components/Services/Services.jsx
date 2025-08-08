@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <div className="services" data-aos="fade-up">
       <h1 className="servicesTitle" data-aos="fade-down">
-        <IoMdSettings style={{ color: '#525CA9' }} /> {t('services.sectionTitle')}
+        <IoMdSettings style={{ color: '#ffba67' }} /> {t('services.sectionTitle')}
       </h1>
 
       <div className="servicesContainer">

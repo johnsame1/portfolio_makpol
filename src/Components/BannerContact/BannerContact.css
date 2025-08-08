@@ -41,7 +41,7 @@ html[dir="rtl"] .bannerContact{
 
 .bannerTitle {
   min-width: 400px;
-  color: #5e56a3;
+  color: #ffba67;
   font-weight: 400;
   font-size: 68px;
   line-height: 1.2;
@@ -50,7 +50,7 @@ html[dir="rtl"] .bannerContact{
 
 .bannerTopic {
   min-width: 200px;
-  color: #666;
+  color: #ffba67;
   font-size: 42px;
   font-weight: 500;
   margin: 0;

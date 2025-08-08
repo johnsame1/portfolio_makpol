@@ -24,9 +24,9 @@ const Home = () => {
         <SectionFour />
       </section>
 
-      {/* <section id="portfolio">
+      <section id="portfolio">
         <SliderCart />
-      </section> */}
+      </section>
     </>
   );
 };

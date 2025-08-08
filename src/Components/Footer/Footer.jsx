@@ -48,10 +48,11 @@ const Footer = () => (
 
       <div className="footerColumn">
         <h4 className="topic">
-          <IoIosChatboxes style={{ color: '#2E2D7D', fontSize: '30px' }} />{' '}
-devosoft5@gmail.com        </h4>
+          <IoIosChatboxes style={{ color: '#ffba67', fontSize: '30px' }} />{' '}
+          devosoft5@gmail.com{' '}
+        </h4>
         <h4 className="topic">
-          <MdCall style={{ color: '#2E2D7D', fontSize: '30px' }} /> 01157956322
+          <MdCall style={{ color: '#ffba67', fontSize: '30px' }} /> 01202275620
         </h4>
         <div className="socialIcons">
           <a
@@ -70,7 +71,7 @@ devosoft5@gmail.com        </h4>
             <FaLinkedin className="icon" />
           </a>
           <a
-            href="https://wa.me/+201157956322"
+            href="https://wa.me/+01202275620"
             target="_blank"
             rel="noopener noreferrer"
           >

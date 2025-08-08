@@ -69,61 +69,24 @@
       }
     }
   },
-  "slider": {
-    "title": "What Our Clients Say",
-    "description": "We’re proud to build strong relationships with our clients"
+ "slider": {
+  "title": "Our Last Projects in Websites",
+  "description": "We’re proud to build strong relationships From our Projects",
+  "webProjects": "Website Projects",
+  "mobileApps": "Mobile Applications",
+  "mobileAppsDesc": "Some examples of mobile app UI designs and prototypes.",
+  "Link Project": "View Project"
+},
+
+ 
+  "footer": {
+    "tagline": "We build smart digital products",
+    "rights": "All rights reserved © 2025 DevoSoft"
   },
-  "testimonials": {
-    "1": {
-      "job": "Software Engineer",
-      "comment": "Great service and amazing team!"
-    },
-    "2": {
-      "job": "Product Manager",
-      "comment": "I loved the experience, highly recommended!"
-    },
-    "3": {
-      "job": "UX Designer",
-      "comment": "Very professional and fast delivery."
-    },
-    "4": {
-      "job": "Marketing Specialist",
-      "comment": "Exceptional quality and friendly staff."
-    },
-    "5": {
-      "job": "Business Analyst",
-      "comment": "Smooth process and great communication."
-    },
-    "6": {
-      "job": "Graphic Designer",
-      "comment": "I will definitely come back again!"
-    },
-    "7": {
-      "job": "Data Scientist",
-      "comment": "The results exceeded my expectations."
-    },
-    "8": {
-      "job": "HR Manager",
-      "comment": "Highly organized and professional team."
-    },
-    "9": {
-      "job": "QA Engineer",
-      "comment": "Fast response and great quality."
-    },
-    "10": {
-      "job": "Content Writer",
-      "comment": "Amazing support and fantastic results."
-    }
-  },"footer": {
-  "tagline": "We build smart digital products",
-  "rights": "All rights reserved © 2025 DevoSoft"
-}
-,
   "contact": {
     "title": "Contact Us",
     "subtitle": "We would love to hear from you"
-  }
-,
+  },
   "contacts": {
     "title": "Get in touch",
     "description": "Have a project in mind? Let’s talk. We’re here to answer your questions and help bring your ideas to life.",
@@ -132,7 +95,7 @@
     "emailTitle": "Email Us",
     "email": "devosoft5@gmail.com",
     "phoneTitle": "Call Us",
-    "phone": "+201157956322",
+    "phone": "+01202275620",
     "followUs": "Follow Our Social Media",
     "formTitle": "Send a message",
     "formDescription": "Send us a quick message and our team will reach out to you",
@@ -142,7 +105,4 @@
     "message": "Your Message",
     "send": "Send Message"
   }
-
-
-
 }

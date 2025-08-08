@@ -1,52 +1,73 @@
 import React from 'react';
 import './SliderCart.css';
-import testimonials from '../../assets/data';
-import image from '../../assets/man.jpg';
-import { FaComments } from 'react-icons/fa';
+import { testimonials, card } from '../../assets/data';
+import { FaFolderOpen, FaMobileAlt } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const SliderCart = () => {
-  const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === 'ar';
-
-  const renderCards = (direction) => (
-    <div className={`sliderTrack ${direction}`}>
-      {[...testimonials, ...testimonials].map((item, index) => (
-        <div
-          key={index}
-          className="card"
-          data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'} // ✅ Animation
-          data-aos-delay={(index % testimonials.length) * 100} // ✅ Delay effect
-        >
-          <div className="title">
-            <img src={image} alt={item.name} className="clientImage" />
-            <div className="titleContainer">
-              <h3 style={{ margin: '0' }}>{item.name}</h3>
-              <p className="job">{t(`testimonials.${item.id}.job`)}</p>
-            </div>
-          </div>
-          <p className="comment">"{t(`testimonials.${item.id}.comment`)}"</p>
-          <p className="date">{item.date}</p>
-        </div>
-      ))}
-    </div>
-  );
+  const { t } = useTranslation();
 
   return (
     <div className="sliderContainer" data-aos="fade-up">
+      {/* العنوان الرئيسي */}
       <div className="head">
         <h1>
-          <FaComments style={{ color: '#525CA9', marginRight: '5px' }} />
+          <FaFolderOpen style={{ color: '#ffba67', marginRight: '5px' }} />
           {t('slider.title')}
         </h1>
         <p className="description">{t('slider.description')}</p>
       </div>
 
-      <div className="slider">
-        {renderCards(isRTL ? 'scrollRight' : 'scrollLTRLeft')}
+      {/* قسم المشاريع - مواقع ويب */}
+      <div className="cardsWrapper">
+        {testimonials.map((item) => (
+          <div
+            key={item.id}
+            className="projectCard"
+            data-aos={item.id % 2 === 0 ? 'fade-up' : 'fade-down'}
+            data-aos-delay={item.id * 100}
+          >
+            <div className="imageWrapper">
+              <img src={item.image} alt={item.name} className="projectImage" />
+            </div>
+            <div className="projectContent">
+              <h3 className="projectTitle">{item.name}</h3>
+              <p className="projectDescription">{item.description}</p>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectLink"
+              >
+                {t('Link Project')}
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="slider">
-        {renderCards(isRTL ? 'scrollLeft' : 'scrollLTRRight')}
+
+      {/* عنوان فرعي لتطبيقات الموبايل */}
+      <div className="head" style={{ marginTop: '50px' }}>
+        <h2>
+          <FaMobileAlt style={{ color: '#ffba67', marginRight: '5px' }} />
+          {t('slider.mobileApps')}
+        </h2>
+        <p className="description">{t('slider.mobileAppsDesc')}</p>
+      </div>
+
+      {/* قسم المشاريع - تطبيقات موبايل */}
+      <div className="cardsWrapper">
+        {card.map((item) => (
+<div key={item.id} className="projectCard mobileCard">
+            <div className="imageWrapper">
+              <img src={item.image} alt={item.name} className="projectImage" />
+            </div>
+            <div className="projectContent">
+              <h3 className="projectTitle">{item.name}</h3>
+              <p className="projectDescription">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

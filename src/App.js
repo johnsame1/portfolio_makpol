@@ -7,7 +7,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import Aos from 'aos';
-import 'aos/dist/aos.css'; // ضروري تضيفه مرة واحدة هنا
+import 'aos/dist/aos.css'; 
 import ScrollToTop from './Components/ScrollTop';
 
 function App() {

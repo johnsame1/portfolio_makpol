@@ -64,7 +64,7 @@
 
 }
 
-.imageWrapper .image {
+.sectionAbout .imageWrapper .image {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -72,14 +72,14 @@
   
 }
 
-.imageWrapper::before,
-.imageWrapper::after {
+.sectionAbout .imageWrapper::before,
+.sectionAbout .imageWrapper::after {
   content: "";
   position: absolute;
   background-color: transparent;
 }
 
-.imageWrapper::before {
+.sectionAbout .imageWrapper::before {
   top: 0;
   right: 0;
   width: 150px;
@@ -91,7 +91,7 @@
   border-radius: 20px;
 }
 
-.imageWrapper::after {
+.sectionAbout .imageWrapper::after {
   bottom: 0;
   left: 0;
   width: 150px;

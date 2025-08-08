@@ -10,7 +10,7 @@
 .SectionFour .line {
   display: block;
   width: 20px;
-  background-color: #5c4b99;
+  background-color: #ffba67;
   height: 2px;
 }
 .descreption {
@@ -29,7 +29,7 @@
   align-items: center;
 }
 .play {
-  background-color: #b5a8d2;
+  background-color: #ffba67;
   color: white;
   display: flex;
   flex-direction: column;
@@ -67,11 +67,11 @@
 }
 
 .feature-card.highlighted {
-  background: #f5f1fa;
+  background: #ffba67;
 }
 
 .feature-card h3 {
-  color: #5c4b99;
+  color: #d3913e;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }

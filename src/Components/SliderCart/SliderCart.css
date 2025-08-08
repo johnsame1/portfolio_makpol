@@ -1,156 +1,249 @@
-.sliderContainer {
-  overflow: hidden;
+/* SliderCart.css */
+.cardsWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
+}
+.sliderContainer .sliderContainer {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .sliderContainer .head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sliderContainer .head h1 {
+  font-size: 32px;
+  color: #333;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  margin-left: 25px;
+  align-items: center;
+  gap: 10px;
 }
 
-.description {
-  color: #888888;
-  margin: 0 0 25px 40px;
-  font-weight: 400;
+.sliderContainer .description {
+  color: #666;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.slider {
-  display: block;
-  margin-bottom: 30px;
+.sliderContainer .slider {
   overflow: hidden;
   width: 100%;
+  margin-bottom: 30px;
 }
 
-.sliderTrack {
+.sliderContainer .sliderTrack {
   display: flex;
-  gap: 10px;
-    direction: ltr; /* ✅ أهم سطر */
-
-  width: max-content;
+  width: fit-content;
+  animation: scrollLeft 30s linear infinite;
+  gap: 20px;
 }
 
-.scroll-left {
-  animation: scrollLeft 35s linear infinite;
+.sliderContainer .sliderTrack.scrollRight {
+  animation: scrollRight 30s linear infinite;
 }
 
-.scroll-right {
-  animation: scrollRight 35s linear infinite;
+.sliderContainer .sliderTrack.scrollLTRLeft {
+  animation: scrollLeft 30s linear infinite;
 }
 
-.card {
-  background: #f0eef6;
+.sliderContainer .sliderTrack.scrollLTRRight {
+  animation: scrollRight 30s linear infinite;
+}
+
+.sliderContainer .card {
+  flex: 0 0 300px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin: 0 10px;
-  min-width: 350px;
-  max-width: 400px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.card .title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.sliderContainer.card:hover {
+  transform: translateY(-10px);
 }
 
-.card .titleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.sliderContainer .imageWrapper {
+  width: 100%;
+  height: 200px;
+
 }
 
-.clientImage {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.sliderContainer .projectImage {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-right: 10px;
+  border-radius: 10px;
+  overflow: scroll;
 }
 
-.job {
+
+.sliderContainer .projectContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sliderContainer .projectTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sliderContainer .projectDescription {
   font-size: 14px;
+  color: #666;
+  max-width: 90%;
+}
+
+.sliderContainer .projectLink {
+  margin-top: auto;
+  font-size: 14px;
+  color: #525CA9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sliderContainer .projectLink:hover {
+  color: #394193;
+}
+
+/* كارت تطبيق الموبايل */
+.projectCard.mobileCard {
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* 3 كروت في الصف على الديسكتوب */
+  max-width: 350px;
+}
+
+.projectCard.mobileCard:hover {
+  transform: translateY(-8px);
+}
+
+/* صورة الكارت */
+.projectCard.mobileCard .imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.projectCard.mobileCard .imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.projectCard.mobileCard:hover .imageWrapper img {
+  transform: scale(1.05);
+}
+
+/* النصوص داخل الكارت */
+.projectCard.mobileCard .projectContent {
+  padding: 16px;
+}
+
+.projectCard.mobileCard .projectTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.projectCard.mobileCard .projectDescription {
+  font-size: 0.95rem;
   color: #555;
-  margin: 5.2px 0;
+  line-height: 1.4;
 }
 
-.comment {
-  font-style: italic;
-  margin: 20px 0;
-  text-align: center;
+/* موبايل - شاشات صغيرة أقل من 600px */
+@media (max-width: 600px) {
+  .projectCard.mobileCard {
+    flex: 1 1 100%; /* كارت واحد في الصف */
+    border-radius: 12px;
+  }
+
+  .projectCard.mobileCard .imageWrapper {
+    height: 160px;
+  }
+
+  .projectCard.mobileCard .projectTitle {
+    font-size: 1rem;
+  }
+
+  .projectCard.mobileCard .projectDescription {
+    font-size: 0.85rem;
+  }
 }
 
-.date {
-  font-size: 12px;
-  color: #999;
-  text-align: right;
-}
-.scrollRight {
-  animation: scrollRight 35s linear infinite;
+/* تابلت - من 601px إلى 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .projectCard.mobileCard {
+    flex: 1 1 calc(50% - 20px); /* كارتين في الصف */
+    border-radius: 15px;
+  }
+
+  .projectCard.mobileCard .imageWrapper {
+    height: 180px;
+  }
+
+  .projectCard.mobileCard .projectTitle {
+    font-size: 1.1rem;
+  }
+
+  .projectCard.mobileCard .projectDescription {
+    font-size: 0.9rem;
+  }
 }
 
-.scrollLeft {
-  animation: scrollLeft 35s linear infinite;
-}
+/* ديسكتوب - أكبر من 1024px */
+@media (min-width: 1025px) {
+  .projectCard.mobileCard {
+    flex: 1 1 calc(33.333% - 20px); /* 3 كروت في الصف */
+    border-radius: 18px;
+  }
 
-.scrollLTRRight {
-  animation: scrollLTRRight 35s linear infinite;
-}
+  .projectCard.mobileCard .imageWrapper {
+    height: 200px;
+  }
 
-.scrollLTRLeft {
-  animation: scrollLTRLeft 35s linear infinite;
+  .projectCard.mobileCard .projectTitle {
+    font-size: 1.2rem;
+  }
+
+  .projectCard.mobileCard .projectDescription {
+    font-size: 0.95rem;
+  }
 }
 
 /* Animations */
-/* عربي */
-@keyframes scrollRight {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(-50%);
   }
 }
 
-/* إنجليزي */
-@keyframes scrollLTRRight {
+@keyframes scrollRight {
   0% {
     transform: translateX(-50%);
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes scrollLTRLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card {
-    min-width: 180px;
-    max-width: 220px;
-    padding: 10px;
   }
 }

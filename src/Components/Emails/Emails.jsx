@@ -92,7 +92,7 @@ function Emails() {
             <FaLinkedin className="icons" />
           </a>{' '}
           <a
-            href="https://wa.me/201157956322"
+            href="https://wa.me/01202275620"
             target="_blank"
             rel="noopener noreferrer"
           >
